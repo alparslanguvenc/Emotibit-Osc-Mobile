@@ -7,6 +7,14 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Android 10+](https://img.shields.io/badge/Android-10%2B-3DDC84)
 
+<p align="center">
+  <a href="https://github.com/alparslanguvenc/Emotibit-Osc-Mobile/releases/latest/download/emotibit-osc-mobile.apk"><img src="https://img.shields.io/badge/Download-APK-00677F?style=for-the-badge&logo=android&logoColor=white" alt="Download the latest APK"></a>
+</p>
+<p align="center">
+  <img src="docs/download-qr.png" width="150" alt="QR code: download the latest APK"><br>
+  <sub>Scan with your phone's camera to download the latest APK.</sub>
+</p>
+
 > **Unofficial.** This is an independent community project. It is not made, affiliated with or endorsed by EmotiBit / Connected Future Labs. "EmotiBit" is used only to say which device the app works with.
 
 <p align="center">
@@ -53,7 +61,7 @@ EmotiBit Osc Mobile does the host's job from your phone, over the phone's own Wi
 
 ## Install
 
-1. Download `emotibit-osc-mobile-<version>.apk` from the [latest release](https://github.com/alparslanguvenc/Emotibit-Osc-Mobile/releases/latest).
+1. On the phone, open **[github.com/alparslanguvenc/Emotibit-Osc-Mobile/releases/latest/download/emotibit-osc-mobile.apk](https://github.com/alparslanguvenc/Emotibit-Osc-Mobile/releases/latest/download/emotibit-osc-mobile.apk)** (or scan the QR code above). This link always gives the newest version. Older versions are on the [Releases](https://github.com/alparslanguvenc/Emotibit-Osc-Mobile/releases) page.
 2. *(Optional)* Check the file: its SHA-256 is listed in the release notes and in `<apk>.sha256`. The release signing certificate's SHA-256 fingerprint is:
    ```
    7D:D0:78:99:09:BA:47:34:F1:3A:F7:DF:20:A3:1A:87:BF:5B:8D:BF:FB:E2:87:8B:24:F6:98:ED:E0:72:3F:A8

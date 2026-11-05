@@ -25,7 +25,7 @@ EmotiBit'in SD kartını bilgisayara takın ve `config.txt` dosyasını açın. 
 
 ### 1.3 Uygulamayı kurma
 
-README'deki [Install](../README.md#install) bölümüne bakın. İlk açılışta:
+Telefonda <https://github.com/alparslanguvenc/Emotibit-Osc-Mobile/releases/latest/download/emotibit-osc-mobile.apk> adresini açın (her zaman en yeni sürüm) ve README'deki [Install](../README.md#install) bölümüne bakın. İlk açılışta:
 
 1. Bildirim iznini verin. "Yeniden kapsama alanında" ve "Kayıt durduruldu" uyarıları bildirimle gelir.
 2. **Kontrol** ekranında **Pil ayarlarını aç**'a dokunup uygulamayı **Kısıtlanmamış** yapın. Aksi hâlde bazı telefonlar (özellikle Samsung, Xiaomi) ekran kapalıyken arka plandaki uygulamaları durdurur.

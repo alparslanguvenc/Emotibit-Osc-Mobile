@@ -25,7 +25,7 @@ Put the EmotiBit SD card in a computer and open `config.txt`. Add the hotspot an
 
 ### 1.3 Install the app
 
-See [Install](../README.md#install) in the README. After the first start:
+On the phone, open <https://github.com/alparslanguvenc/Emotibit-Osc-Mobile/releases/latest/download/emotibit-osc-mobile.apk> (always the newest version) and see [Install](../README.md#install) in the README. After the first start:
 
 1. Allow notifications. The app uses them for "back in range" and "recording stopped" alerts.
 2. On the *Control* screen, tap **Open battery settings** and set the app to **Unrestricted**. Some phones, especially Samsung and Xiaomi, otherwise stop background apps with the screen off.
