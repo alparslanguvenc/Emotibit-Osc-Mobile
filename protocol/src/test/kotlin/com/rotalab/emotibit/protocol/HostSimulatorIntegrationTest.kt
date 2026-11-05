@@ -88,6 +88,15 @@ class HostSimulatorIntegrationTest {
         }
     }
 
+    private fun awaitEvents(type: String, count: Int, timeoutMs: Long = 5000) {
+        val deadline = System.currentTimeMillis() + timeoutMs
+        while (System.currentTimeMillis() < deadline) {
+            if (synchronized(events) { events.count { it.type == type } } >= count) return
+            Thread.sleep(50)
+        }
+        throw AssertionError("expected $count '$type' events, got ${synchronized(events) { events.map { it.type } }}")
+    }
+
     private fun checkFile(file: File): Pair<Int, String> {
         val p = ProcessBuilder(python()!!, "-I", checkScript.absolutePath, file.absolutePath, "--edge-seconds", "3", "--json")
             .redirectErrorStream(true).start()
@@ -135,9 +144,10 @@ class HostSimulatorIntegrationTest {
 
         val done = waitFor(h, 20_000, "auto-reconnect and safe stop") { it.recording == RecordingStatus.NOT_RECORDING }
         assertTrue("syncs collected in final connection", done.syncsThisConnection >= 3)
-        assertTrue(events.any { it.type == "connection_lost" })
-        assertTrue(events.count { it.type == "connected" } >= 2)
-        assertTrue(events.any { it.type == "record_stopped" })
+        // Events are emitted right after the state update, so give the collector a moment.
+        awaitEvents("connection_lost", 1)
+        awaitEvents("connected", 2)
+        awaitEvents("record_stopped", 1)
 
         val (code, json) = checkFile(file)
         assertEquals("check_sd_file exit code (0 = syncs at start and end): $json", 0, code)
