@@ -1,0 +1,79 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Check signing secrets
+        env:
+          KEYSTORE_B64: ${{ secrets.SIGNING_KEYSTORE_BASE64 }}
+          PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
+        run: |
+          if [ -z "$KEYSTORE_B64" ] || [ -z "$PASSWORD" ]; then
+            echo "::error::Add the SIGNING_KEYSTORE_BASE64 and SIGNING_PASSWORD repository secrets (see docs/RELEASING.md)."
+            exit 1
+          fi
+
+      - name: Tests
+        run: ./gradlew :protocol:test
+
+      - name: Build signed release APK
+        env:
+          KEYSTORE_B64: ${{ secrets.SIGNING_KEYSTORE_BASE64 }}
+          SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
+        run: |
+          echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/release.p12"
+          export SIGNING_KEYSTORE="$RUNNER_TEMP/release.p12"
+          ./gradlew :app:assembleRelease
+          rm -f "$RUNNER_TEMP/release.p12"
+
+      - name: Verify signature and prepare files
+        id: files
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          SRC=$(ls app/build/outputs/apk/release/*-release.apk | head -1)
+          OUT="emotibit-osc-mobile-${VERSION}.apk"
+          cp "$SRC" "$OUT"
+          APKSIGNER=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -1)
+          "$APKSIGNER" verify --verbose --print-certs "$OUT" | tee signature.txt
+          EXPECTED="7d:d0:78:99:09:ba:47:34:f1:3a:f7:df:20:a3:1a:87:bf:5b:8d:bf:fb:e2:87:8b:24:f6:98:ed:e0:72:3f:a8"
+          ACTUAL=$(grep -m1 "certificate SHA-256 digest" signature.txt | awk '{print $NF}' | sed 's/../&:/g; s/:$//')
+          if [ "$ACTUAL" != "$EXPECTED" ]; then echo "::error::Unexpected signing certificate $ACTUAL"; exit 1; fi
+          sha256sum "$OUT" > "$OUT.sha256"
+          echo "apk=$OUT" >> "$GITHUB_OUTPUT"
+          echo "sha=$(cut -d' ' -f1 "$OUT.sha256")" >> "$GITHUB_OUTPUT"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Release notes
+        run: |
+          NOTES="docs/release-notes/v${{ steps.files.outputs.version }}.md"
+          { [ -f "$NOTES" ] && cat "$NOTES" || echo "See CHANGELOG.md."; echo; echo "### Download"; echo
+            echo "| File | SHA-256 |"; echo "|---|---|"
+            echo "| \`${{ steps.files.outputs.apk }}\` | \`${{ steps.files.outputs.sha }}\` |"; echo
+            echo "Signing certificate SHA-256: \`7D:D0:78:99:09:BA:47:34:F1:3A:F7:DF:20:A3:1A:87:BF:5B:8D:BF:FB:E2:87:8B:24:F6:98:ED:E0:72:3F:A8\`"
+          } > release-body.md
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          name: EmotiBit Osc Mobile ${{ steps.files.outputs.version }}
+          body_path: release-body.md
+          files: |
+            ${{ steps.files.outputs.apk }}
+            ${{ steps.files.outputs.apk }}.sha256

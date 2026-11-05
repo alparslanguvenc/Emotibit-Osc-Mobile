@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EmotiBit Osc Mobile</string>
+
+    <!-- Top bar -->
+    <string name="menu_language">Dil</string>
+    <string name="language_system">Sistem varsayılanı</string>
+    <string name="language_tr">Türkçe</string>
+    <string name="language_en">English</string>
+    <string name="menu_quit">Uygulamadan çık</string>
+    <string name="quit_title">Uygulamadan çıkılsın mı?</string>
+    <string name="quit_recording_warning">EmotiBit kayıtta. SD karta kaydetmeyi sürdürür, ama uygulama artık kendiliğinden yeniden bağlanmaz ve zaman eşlemesi toplamaz. Mümkünse çıkmadan önce güvenli durdurma yapın.</string>
+    <string name="quit_idle">Arka plandaki bağlantı servisi duracak.</string>
+    <string name="quit_confirm">Çık</string>
+    <string name="cancel">Vazgeç</string>
+
+    <!-- Connection -->
+    <string name="section_connection">Cihazlar</string>
+    <string name="link_stopped">Servis çalışmıyor</string>
+    <string name="link_searching">EmotiBit aranıyor…</string>
+    <string name="link_connecting">%1$s cihazına bağlanılıyor…</string>
+    <string name="link_connected">Bağlı: %1$s (%2$s)</string>
+    <string name="link_waiting">Kapsama dışında: %1$s. Kendiliğinden yeniden bağlanacak.</string>
+    <string name="link_choose">Aşağıdan EmotiBit\'inizi seçin.</string>
+    <string name="control_not_ready">Komut kanalı açılıyor…</string>
+    <string name="networks_label">Ağlar: %1$s</string>
+    <string name="no_network">Wi-Fi veya hotspot ağı yok. Telefonun hotspot\'unu açın (2.4 GHz, WPA2) ve EmotiBit\'in config.txt dosyasında bu ağın olduğundan emin olun.</string>
+    <string name="device_available">bağlanılabilir</string>
+    <string name="device_busy">başka bir host\'a bağlı</string>
+    <string name="device_unseen">son zamanlarda görülmedi</string>
+    <string name="device_connect">Bağlan</string>
+    <string name="device_forget">Unut</string>
+    <string name="device_target">otomatik bağlanma</string>
+    <string name="manual_ip_label">EmotiBit IP adresi (isteğe bağlı)</string>
+    <string name="manual_ip_add">Yokla</string>
+
+    <!-- Recording -->
+    <string name="section_recording">Kayıt</string>
+    <string name="rec_unknown">Kayıt durumu: cihazdan bilgi bekleniyor</string>
+    <string name="rec_not_recording">Kayıt yok</string>
+    <string name="rec_starting">Kayıt başlatılıyor…</string>
+    <string name="rec_recording">KAYITTA</string>
+    <string name="rec_stopping">Kayıt durduruluyor…</string>
+    <string name="rec_file">Dosya: %1$s</string>
+    <string name="rec_elapsed">Geçen süre: %1$s</string>
+    <string name="rec_last_confirmed">Cihaz en son %1$s önce doğruladı. EmotiBit kapsama dışındayken de SD karta kaydetmeyi sürdürür.</string>
+    <string name="syncs_line">Bu kayıttaki zaman eşlemeleri: %1$d (bu bağlantıda: %2$d)</string>
+    <string name="syncs_rtt">Son gidiş-dönüş: %1$d ms</string>
+    <string name="syncs_start_wait">En az 2 zaman eşlemesi kaydedilene kadar yakında kalın (yaklaşık 10 sn).</string>
+    <string name="syncs_start_ok">✓ Başlangıç zaman eşlemeleri kaydedildi. Uzaklaşabilirsiniz, kayıt sürer.</string>
+    <string name="btn_start">Kaydı başlat</string>
+    <string name="btn_stop">Kaydı durdur…</string>
+    <string name="stop_title">Kaydı durdur</string>
+    <string name="stop_text">Güvenli durdurma önce %1$d yeni zaman eşlemesi toplar, sonra kaydı bitirir. Böylece DataParser saat kaymasını düzeltebilir. Şu an kapsama dışındaysanız güvenli durdurma bekler ve yeniden kapsama alanına girdiğinizde kendiliğinden çalışır.</string>
+    <string name="stop_safe">Güvenli durdur (önerilen)</string>
+    <string name="stop_now">Hemen durdur</string>
+    <string name="safe_waiting_link">Güvenli durdurma bekliyor: EmotiBit\'in Wi-Fi kapsama alanına girin.</string>
+    <string name="safe_collecting">Güvenli durdurma: zaman eşlemeleri toplanıyor %1$d / %2$d…</string>
+    <string name="safe_timeout">Uzun süredir hiçbir zaman eşlemesi başarılı olmadı. Bağlantıyı kontrol edin ya da hemen durdurun.</string>
+    <string name="safe_cancel">Güvenli durdurmayı iptal et</string>
+    <string name="err_record_start_unconfirmed">Cihaz kaydı doğrulamadı. SD kart takılı mı? Tekrar deneyin.</string>
+
+    <!-- Markers -->
+    <string name="section_markers">İşaretler ve notlar</string>
+    <string name="btn_marker">Senkron işareti (flaş + bip)</string>
+    <string name="marker_hint">Kameranızı telefon ekranına çevirip dokunun: flaş ve bip, EmotiBit dosyasına yazılan anın aynısını gösterir.</string>
+    <string name="marker_sent">%1$s yazıldı</string>
+    <string name="note_label">Not</string>
+    <string name="note_send">Notu yaz</string>
+
+    <!-- Device -->
+    <string name="section_device">Cihaz</string>
+    <string name="battery">Pil: %1$s</string>
+    <string name="power_mode">Mod: %1$s</string>
+    <string name="data_rate">Veri: %1$d paket/sn</string>
+    <string name="mode_MN">Normal</string>
+    <string name="mode_ML">Düşük güç</string>
+    <string name="mode_MM">En düşük güç</string>
+    <string name="mode_MO">Wi-Fi kapalı</string>
+    <string name="mode_MH">Uyku</string>
+    <string name="btn_wifi_off">Wi-Fi\'yi kapat (pil tasarrufu)…</string>
+    <string name="wifi_off_title">EmotiBit\'in Wi-Fi\'ı kapatılsın mı?</string>
+    <string name="wifi_off_text">EmotiBit kaydetmeyi sürdürür, ama EmotiBit düğmesine kısa basılana kadar ona ulaşılamaz. Düğmeye basılınca uygulama kendiliğinden yeniden bağlanır. Wi-Fi kapalıyken zaman eşlemesi kaydedilmez.</string>
+    <string name="wifi_off_confirm">Wi-Fi\'yi kapat</string>
+    <string name="btn_hibernate">EmotiBit\'i uyut…</string>
+    <string name="hibernate_title">EmotiBit uyku moduna alınsın mı?</string>
+    <string name="hibernate_text">EmotiBit kapanır. Yeniden kullanmak için uyku anahtarını açıp kapatın ya da reset düğmesine basın.</string>
+    <string name="hibernate_confirm">Uyut</string>
+    <string name="btn_battery_opt">Pil ayarlarını aç</string>
+    <string name="battery_opt_ok">Arka planda çalışmaya izin verildi</string>
+
+    <!-- Guide -->
+    <string name="section_guide">Saha akışı</string>
+    <string name="guide_text">1. Telefonun hotspot\'unu (2.4 GHz, WPA2), sonra EmotiBit\'i açın.\n2. Bağlanın, kaydı başlatın ve 2 zaman eşlemesini bekleyin.\n3. Kameranın önünde senkron işaretine dokunun.\n4. Katılımcıyı takip edin. Kapsama dışındayken EmotiBit kaydetmeyi sürdürür; yeniden yaklaştığınız her an uygulama kendiliğinden bağlanır ve zaman eşlemesi toplar.\n5. Sonda Güvenli durdur\'u seçin. Kapsama alanına dönmeden basmış olsanız bile, yeni zaman eşlemelerinden sonra durdurur.\n6. Dosyaları SD karttan kopyalayıp EmotiBit DataParser ile ayrıştırın.</string>
+
+    <!-- Log -->
+    <string name="section_log">Olay günlüğü</string>
+    <string name="log_share">Günlüğü paylaş</string>
+    <string name="log_empty">Henüz olay yok.</string>
+
+    <!-- Results -->
+    <string name="res_not_connected">EmotiBit\'e bağlı değil.</string>
+    <string name="res_no_control">Komut kanalı henüz hazır değil. Biraz bekleyin.</string>
+    <string name="res_already_recording">EmotiBit zaten kayıtta.</string>
+    <string name="res_not_recording">EmotiBit kayıtta değil.</string>
+    <string name="res_busy">Cihaz durumu bekleniyor. Bir saniye sonra tekrar deneyin.</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_status">Bağlantı durumu</string>
+    <string name="notif_channel_alerts">Bağlantı uyarıları</string>
+    <string name="notif_recording">Kayıt %1$s · %2$d zaman eşlemesi</string>
+    <string name="notif_idle">EmotiBit servisi çalışıyor</string>
+    <string name="notif_reconnected">EmotiBit yeniden kapsama alanında: %1$s</string>
+    <string name="notif_lost">EmotiBit kapsama dışında: %1$s (SD karta kayıt sürüyor)</string>
+    <string name="notif_stopped">Kayıt durduruldu: %1$s</string>
+
+    <!-- Events -->
+    <string name="ev_host_started">Servis başladı (veri portu %1$s, kontrol portu %2$s)</string>
+    <string name="ev_host_stopped">Servis durdu</string>
+    <string name="ev_target_set">%1$s cihazına otomatik bağlanılacak</string>
+    <string name="ev_device_found">%1$s bulundu (%2$s)</string>
+    <string name="ev_connecting">%1$s cihazına bağlanılıyor</string>
+    <string name="ev_connected">%1$s cihazına bağlanıldı</string>
+    <string name="ev_connection_lost">Bağlantı koptu: %1$s</string>
+    <string name="ev_connect_timeout">Bağlanma denemesi zaman aşımına uğradı: %1$s</string>
+    <string name="ev_disconnected">Bağlantı kesildi</string>
+    <string name="ev_record_start_sent">Başlat komutu gönderildi</string>
+    <string name="ev_record_started">Kayıt başladı: %1$s</string>
+    <string name="ev_recording_in_progress">Cihaz kayıtta: %1$s</string>
+    <string name="ev_record_start_unconfirmed">Kayıt başlangıcı doğrulanmadı</string>
+    <string name="ev_record_stop_sent">Durdur komutu gönderildi</string>
+    <string name="ev_record_stopped">Kayıt durdu: %1$s (%2$s zaman eşlemesi)</string>
+    <string name="ev_record_stop_unconfirmed_retry">Durdurma doğrulanmadı, yeniden gönderiliyor</string>
+    <string name="ev_safe_stop_requested">Güvenli durdurma istendi</string>
+    <string name="ev_safe_stop_cancelled">Güvenli durdurma iptal edildi</string>
+    <string name="ev_safe_stop_timeout">Güvenli durdurma: zaman eşlemesi başarılı olmadı</string>
+    <string name="ev_note_sent">Not: %1$s</string>
+    <string name="ev_marker_sent">İşaret: %1$s</string>
+    <string name="ev_power_mode_sent">Mod komutu: %1$s</string>
+    <string name="ev_power_mode">Cihaz modu: %1$s</string>
+    <string name="ev_device_data_overflow">Cihaz veri taşması bildirdi</string>
+    <string name="ev_manual_target">%1$s yoklanıyor</string>
+    <!-- Live signals -->
+    <string name="tab_control">Kontrol</string>
+    <string name="tab_live">Canlı grafik</string>
+    <string name="sig_window_s">%1$d sn</string>
+    <string name="sig_eda">EDA</string>
+    <string name="sig_ppg">PPG</string>
+    <string name="sig_hr">Nabız</string>
+    <string name="sig_temp">Sıcaklık</string>
+    <string name="sig_acc">İvmeölçer</string>
+    <string name="sig_gyro">Jiroskop</string>
+    <string name="sig_mag">Manyetometre</string>
+    <string name="sig_no_data">Veri yok</string>
+    <string name="sig_no_stream">Canlı veri yok: EmotiBit bağlı değil. SD karttaki kayıt bundan etkilenmez.</string>
+    <string name="sig_wifi_off">Canlı veri yok: EmotiBit\'in Wi-Fi\'ı kapalı. Açmak için EmotiBit düğmesine kısa basın.</string>
+    <string name="sig_connected">Bağlı · canlı</string>
+    <string name="sig_connecting">Bağlanılıyor…</string>
+    <string name="sig_disconnected">Bağlı değil</string>
+    <string name="sig_syncs">%1$d zaman eşlemesi</string>
+    <string name="sig_marker_short">Senkron işareti</string>
+    <string name="sig_note">Grafikler Wi-Fi üzerinden gelen veriyi gösterir; grafikteki boşluklar SD karttaki kayıtta boşluk olduğu anlamına gelmez. Nabız değerini EmotiBit hesaplar. Değerler sinyal kalitesini kontrol etmek içindir, analiz için değil.</string>
+    <string name="app_tagline">Resmî olmayan EmotiBit kontrolcüsü</string>
+    <string name="menu_more">Diğer</string>
+    <string name="menu_about">Hakkında</string>
+    <string name="about_text">Sürüm %1$s\n\nEmotiBit kayıtlarını telefondan başlatıp durdurur, EmotiBit zaman eşlemelerini yanıtlar ve canlı sinyalleri gösterir. Veriler telefonunuzdan ve yerel ağınızdan dışarı çıkmaz.\n\nResmî olmayan topluluk uygulamasıdır; EmotiBit / Connected Future Labs ile bağlantılı değildir ve onlarca onaylanmamıştır. MIT Lisansı.</string>
+    <string name="ok">Tamam</string>
+    <string name="pill_stopped">Durdu</string>
+    <string name="pill_live">Canlı</string>
+    <string name="pill_connecting">Bağlanıyor</string>
+    <string name="pill_out_of_range">Kapsama dışı</string>
+    <string name="pill_searching">Aranıyor</string>
+    <string name="no_device">EmotiBit seçilmedi</string>
+    <string name="rec_ready">Kayda hazır</string>
+    <string name="rec_ready_connect">Kayıt için bir EmotiBit bağlayın</string>
+    <string name="syncs_start_ok_short">Başlangıç eşlemeleri kaydedildi. Uzaklaşabilirsiniz; kayıt SD kartta sürer.</string>
+    <string name="stat_battery">Pil</string>
+    <string name="stat_mode">Mod</string>
+    <string name="stat_data">Veri</string>
+    <string name="stat_data_value">%1$d paket/sn</string>
+    <string name="btn_wifi_off_short">Wi-Fi kapat</string>
+    <string name="btn_hibernate_short">Uyut</string>
+    <string name="battery_opt_hint">Pil optimizasyonu, ekran kapalıyken uygulamayı durdurabilir. Uygulamayı \"Kısıtlanmamış\" yapın.</string>
+</resources>

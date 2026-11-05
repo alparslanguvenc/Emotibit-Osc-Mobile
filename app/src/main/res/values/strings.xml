@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EmotiBit Osc Mobile</string>
+
+    <!-- Top bar -->
+    <string name="menu_language">Language</string>
+    <string name="language_system">System default</string>
+    <string name="language_tr">Türkçe</string>
+    <string name="language_en">English</string>
+    <string name="menu_quit">Quit app</string>
+    <string name="quit_title">Quit the app?</string>
+    <string name="quit_recording_warning">EmotiBit is recording. It keeps recording on its SD card, but the app will no longer reconnect automatically or collect time syncs. Use a safe stop before quitting if you can.</string>
+    <string name="quit_idle">The background connection service will stop.</string>
+    <string name="quit_confirm">Quit</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Connection -->
+    <string name="section_connection">Devices</string>
+    <string name="link_stopped">Service not running</string>
+    <string name="link_searching">Searching for EmotiBit…</string>
+    <string name="link_connecting">Connecting to %1$s…</string>
+    <string name="link_connected">Connected: %1$s (%2$s)</string>
+    <string name="link_waiting">Out of range: %1$s. It will reconnect automatically.</string>
+    <string name="link_choose">Choose your EmotiBit below.</string>
+    <string name="control_not_ready">Opening command channel…</string>
+    <string name="networks_label">Networks: %1$s</string>
+    <string name="no_network">No Wi-Fi or hotspot network. Turn on the phone hotspot (2.4 GHz, WPA2) and make sure EmotiBit\'s config.txt contains it.</string>
+    <string name="device_available">available</string>
+    <string name="device_busy">connected to a host</string>
+    <string name="device_unseen">not seen recently</string>
+    <string name="device_connect">Connect</string>
+    <string name="device_forget">Forget</string>
+    <string name="device_target">auto-connect</string>
+    <string name="manual_ip_label">EmotiBit IP address (optional)</string>
+    <string name="manual_ip_add">Probe</string>
+
+    <!-- Recording -->
+    <string name="section_recording">Recording</string>
+    <string name="rec_unknown">Recording status: waiting for the device</string>
+    <string name="rec_not_recording">Not recording</string>
+    <string name="rec_starting">Starting recording…</string>
+    <string name="rec_recording">RECORDING</string>
+    <string name="rec_stopping">Stopping recording…</string>
+    <string name="rec_file">File: %1$s</string>
+    <string name="rec_elapsed">Elapsed: %1$s</string>
+    <string name="rec_last_confirmed">Last confirmed by the device %1$s ago. EmotiBit keeps recording on its SD card while out of range.</string>
+    <string name="syncs_line">Time syncs in this recording: %1$d (this connection: %2$d)</string>
+    <string name="syncs_rtt">Last round trip: %1$d ms</string>
+    <string name="syncs_start_wait">Stay close until at least 2 time syncs are recorded (about 10 s).</string>
+    <string name="syncs_start_ok">✓ Start time syncs recorded. You can move away; recording continues.</string>
+    <string name="btn_start">Start recording</string>
+    <string name="btn_stop">Stop recording…</string>
+    <string name="stop_title">Stop recording</string>
+    <string name="stop_text">A safe stop first collects %1$d fresh time syncs and then ends the recording, so DataParser can correct clock drift. If you are out of range now, the safe stop waits and runs automatically when you are back in range.</string>
+    <string name="stop_safe">Safe stop (recommended)</string>
+    <string name="stop_now">Stop now</string>
+    <string name="safe_waiting_link">Safe stop pending: come within Wi-Fi range of EmotiBit.</string>
+    <string name="safe_collecting">Safe stop: collecting time syncs %1$d / %2$d…</string>
+    <string name="safe_timeout">No time sync succeeded for a long time. Check the connection, or stop now.</string>
+    <string name="safe_cancel">Cancel safe stop</string>
+    <string name="err_record_start_unconfirmed">The device did not confirm the recording. Is the SD card inserted? Try again.</string>
+
+    <!-- Markers -->
+    <string name="section_markers">Markers and notes</string>
+    <string name="btn_marker">Sync marker (flash + beep)</string>
+    <string name="marker_hint">Point your camera at the phone screen and tap: the flash and beep show the same moment that is written into the EmotiBit file.</string>
+    <string name="marker_sent">%1$s written</string>
+    <string name="note_label">Note</string>
+    <string name="note_send">Write note</string>
+
+    <!-- Device -->
+    <string name="section_device">Device</string>
+    <string name="battery">Battery: %1$s</string>
+    <string name="power_mode">Mode: %1$s</string>
+    <string name="data_rate">Data: %1$d packets/s</string>
+    <string name="mode_MN">Normal</string>
+    <string name="mode_ML">Low power</string>
+    <string name="mode_MM">Max low power</string>
+    <string name="mode_MO">Wi-Fi off</string>
+    <string name="mode_MH">Hibernate</string>
+    <string name="btn_wifi_off">Wi-Fi off (save battery)…</string>
+    <string name="wifi_off_title">Turn EmotiBit Wi-Fi off?</string>
+    <string name="wifi_off_text">EmotiBit keeps recording but cannot be reached until someone short-presses the EmotiBit button. Then the app reconnects automatically. While Wi-Fi is off, no time syncs are recorded.</string>
+    <string name="wifi_off_confirm">Turn Wi-Fi off</string>
+    <string name="btn_hibernate">Hibernate EmotiBit…</string>
+    <string name="hibernate_title">Hibernate EmotiBit?</string>
+    <string name="hibernate_text">EmotiBit turns off. To use it again, toggle its hibernate switch or press reset.</string>
+    <string name="hibernate_confirm">Hibernate</string>
+    <string name="btn_battery_opt">Open battery settings</string>
+    <string name="battery_opt_ok">Background running allowed</string>
+
+    <!-- Guide -->
+    <string name="section_guide">Field workflow</string>
+    <string name="guide_text">1. Turn on the phone hotspot (2.4 GHz, WPA2), then EmotiBit.\n2. Connect, start recording and wait for 2 time syncs.\n3. Tap the sync marker in front of the camera.\n4. Follow the participant. When you are out of range EmotiBit keeps recording; whenever you come close again the app reconnects and collects time syncs on its own.\n5. At the end, choose Safe stop. It stops after fresh time syncs, even if you press it before you are back in range.\n6. Copy the files from the SD card and parse them with EmotiBit DataParser.</string>
+
+    <!-- Log -->
+    <string name="section_log">Event log</string>
+    <string name="log_share">Share log</string>
+    <string name="log_empty">No events yet.</string>
+
+    <!-- Results -->
+    <string name="res_not_connected">Not connected to EmotiBit.</string>
+    <string name="res_no_control">Command channel not ready yet. Wait a moment.</string>
+    <string name="res_already_recording">EmotiBit is already recording.</string>
+    <string name="res_not_recording">EmotiBit is not recording.</string>
+    <string name="res_busy">Waiting for the device status. Try again in a second.</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_status">Connection status</string>
+    <string name="notif_channel_alerts">Connection alerts</string>
+    <string name="notif_recording">Recording %1$s · %2$d time syncs</string>
+    <string name="notif_idle">EmotiBit service running</string>
+    <string name="notif_reconnected">EmotiBit is back in range: %1$s</string>
+    <string name="notif_lost">EmotiBit out of range: %1$s (still recording on SD card)</string>
+    <string name="notif_stopped">Recording stopped: %1$s</string>
+
+    <!-- Events -->
+    <string name="ev_host_started">Service started (data port %1$s, control port %2$s)</string>
+    <string name="ev_host_stopped">Service stopped</string>
+    <string name="ev_target_set">Auto-connect to %1$s</string>
+    <string name="ev_device_found">Found %1$s at %2$s</string>
+    <string name="ev_connecting">Connecting to %1$s</string>
+    <string name="ev_connected">Connected to %1$s</string>
+    <string name="ev_connection_lost">Connection lost: %1$s</string>
+    <string name="ev_connect_timeout">Connection attempt timed out: %1$s</string>
+    <string name="ev_disconnected">Disconnected</string>
+    <string name="ev_record_start_sent">Start command sent</string>
+    <string name="ev_record_started">Recording started: %1$s</string>
+    <string name="ev_recording_in_progress">Device is recording: %1$s</string>
+    <string name="ev_record_start_unconfirmed">Recording start not confirmed</string>
+    <string name="ev_record_stop_sent">Stop command sent</string>
+    <string name="ev_record_stopped">Recording stopped: %1$s (%2$s time syncs)</string>
+    <string name="ev_record_stop_unconfirmed_retry">Stop not confirmed, sending again</string>
+    <string name="ev_safe_stop_requested">Safe stop requested</string>
+    <string name="ev_safe_stop_cancelled">Safe stop cancelled</string>
+    <string name="ev_safe_stop_timeout">Safe stop: no time syncs succeeded</string>
+    <string name="ev_note_sent">Note: %1$s</string>
+    <string name="ev_marker_sent">Marker: %1$s</string>
+    <string name="ev_power_mode_sent">Mode command: %1$s</string>
+    <string name="ev_power_mode">Device mode: %1$s</string>
+    <string name="ev_device_data_overflow">Device reported data overflow</string>
+    <string name="ev_manual_target">Probing %1$s</string>
+    <!-- Live signals -->
+    <string name="tab_control">Control</string>
+    <string name="tab_live">Live signals</string>
+    <string name="sig_window_s">%1$d s</string>
+    <string name="sig_eda">EDA</string>
+    <string name="sig_ppg">PPG</string>
+    <string name="sig_hr">Heart rate</string>
+    <string name="sig_temp">Temperature</string>
+    <string name="sig_acc">Accelerometer</string>
+    <string name="sig_gyro">Gyroscope</string>
+    <string name="sig_mag">Magnetometer</string>
+    <string name="sig_no_data">No data</string>
+    <string name="sig_no_stream">No live data: EmotiBit is not connected. Recording on the SD card is not affected.</string>
+    <string name="sig_wifi_off">No live data: EmotiBit Wi-Fi is off. Short-press the EmotiBit button to turn it back on.</string>
+    <string name="sig_connected">Connected · live</string>
+    <string name="sig_connecting">Connecting…</string>
+    <string name="sig_disconnected">Not connected</string>
+    <string name="sig_syncs">%1$d time syncs</string>
+    <string name="sig_marker_short">Sync marker</string>
+    <string name="sig_note">The plots show what arrives over Wi-Fi; gaps in the plot are not gaps in the SD-card recording. HR is computed by EmotiBit. Values are for checking signal quality, not for analysis.</string>
+    <string name="app_tagline">Unofficial EmotiBit controller</string>
+    <string name="menu_more">More</string>
+    <string name="menu_about">About</string>
+    <string name="about_text">Version %1$s\n\nStarts and stops EmotiBit recordings from your phone, answers EmotiBit time syncs and shows live signals. Data never leaves your phone and local network.\n\nUnofficial community app, not affiliated with or endorsed by EmotiBit / Connected Future Labs. MIT License.</string>
+    <string name="ok">OK</string>
+    <string name="pill_stopped">Stopped</string>
+    <string name="pill_live">Live</string>
+    <string name="pill_connecting">Connecting</string>
+    <string name="pill_out_of_range">Out of range</string>
+    <string name="pill_searching">Searching</string>
+    <string name="no_device">No EmotiBit selected</string>
+    <string name="rec_ready">Ready to record</string>
+    <string name="rec_ready_connect">Connect an EmotiBit to record</string>
+    <string name="syncs_start_ok_short">Start syncs recorded. You can move away; recording continues on the SD card.</string>
+    <string name="stat_battery">Battery</string>
+    <string name="stat_mode">Mode</string>
+    <string name="stat_data">Data</string>
+    <string name="stat_data_value">%1$d pkt/s</string>
+    <string name="btn_wifi_off_short">Wi-Fi off</string>
+    <string name="btn_hibernate_short">Hibernate</string>
+    <string name="battery_opt_hint">Battery optimization may stop the app when the screen is off. Set the app to \"Unrestricted\".</string>
+</resources>
