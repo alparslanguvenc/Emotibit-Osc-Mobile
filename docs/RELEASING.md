@@ -20,7 +20,7 @@ The workflow refuses to publish an APK whose certificate differs from the finger
 1. Update `versionCode` and `versionName` in `app/build.gradle.kts`.
 2. Add a section to `CHANGELOG.md` and a file `docs/release-notes/v<version>.md`.
 3. Regenerate screenshots if the UI changed: `./gradlew :app:testDebugUnitTest --tests '*ScreenshotTest*' -Pscreenshots` (needs `python3`; images go to `docs/screenshots/`).
-4. Commit, then tag and push: `git tag v<version> && git push origin v<version>`.
+4. Commit and push, then either push a tag (`git tag v<version> && git push origin v<version>`) or run the **Release** workflow from the Actions tab (*Run workflow*, enter the version). The workflow checks that the version matches `versionName`.
 
 ## Building a signed APK locally
 
